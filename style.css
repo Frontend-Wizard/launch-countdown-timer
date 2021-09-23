@@ -134,7 +134,8 @@ footer {
 	background-image: url(Images/pattern-hills.svg);
 	background-size: cover;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 .social {
@@ -150,19 +151,16 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	position: absolute;
-	bottom: -141px;
-	left: 0;
 	font-size: 15px;
+	transform: translateY(36px);
 }
 
 .attribution p {
-	font-weight: 500;
 	color: var(--gray);
 }
 
 .attribution p:first-of-type {
-	margin-right: .4em;
+	margin-right: 0.4em;
 }
 
 .attribution a {
@@ -256,7 +254,7 @@ footer {
 	}
 }
 
-@media screen and (max-width:360px) {
+@media screen and (max-width: 360px) {
 	.attribution {
 		font-size: 11px;
 		flex-direction: column;
