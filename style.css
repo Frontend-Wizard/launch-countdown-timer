@@ -1,0 +1,242 @@
+:root {
+	--MainPink: #fb6087;
+	--gray: #8486a9;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	font-family: Red Hat Text;
+	font-style: normal;
+	font-weight: bold;
+}
+
+@keyframes change {
+	0% {
+		height: 68px;
+		width: 146px;
+		border: 1px solid var(--MainPink);
+		border-radius: 8px 8px 0 0;
+	}
+
+	100% {
+		height: 68px;
+		width: 146px;
+		transform: translateY(70px) rotateX(180deg);
+		border: 1px solid var(--MainPink);
+		border-radius: 8px 8px 0 0;
+		background-image: url(Images/BottomSvg.svg);
+	}
+}
+
+h1 {
+	font-size: 80px;
+	line-height: 106px;
+	letter-spacing: -0.03em;
+	color: var(--MainPink);
+}
+
+h2 {
+	margin-top: 135px;
+	margin-bottom: 105px;
+	text-align: center;
+	font-size: 22px;
+	line-height: 29px;
+	letter-spacing: 0.345em;
+	color: #fff;
+}
+
+h3 {
+	text-align: center;
+	position: relative;
+	top: 22px;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: 0.425em;
+	color: var(--gray);
+}
+
+body,
+footer {
+	min-width: 186px;
+}
+
+body {
+	width: 100%;
+	background-color: #201e2b;
+	background-image: url(Images/bg-stars.svg);
+	background-position-y: 3px;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 688px;
+	height: max-content;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	width: min-content;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.NumberCard {
+	width: 148px;
+	height: 140px;
+	border-radius: 8px;
+	overflow: hidden;
+	filter: drop-shadow(0px 9px 0px #1a1a22);
+}
+
+.NumberCardInnerBottom {
+	position: relative;
+	top: -140px;
+	z-index: -1;
+}
+
+.NumberCardInnerTop .TopPart,
+.NumberCardInnerTop .BottomPart,
+.NumberCardInnerBottom .TopPart {
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	height: 70px;
+}
+
+.NumberCardInnerTop .TopPart,
+.NumberCardInnerBottom .TopPart {
+	background-image: url(Images/TopSvg.svg);
+}
+
+.NumberCardInnerTop .BottomPart {
+	background-image: url(Images/BottomSvg.svg);
+}
+
+.NumberCardInnerTop .TopPart h1,
+.NumberCardInnerBottom .TopPart h1 {
+	transform: translateY(16px);
+}
+
+.NumberCardInnerTop .BottomPart h1 {
+	transform: translateY(-77.3%);
+}
+
+footer {
+	margin-top: 180px;
+	width: 100%;
+	height: 197px;
+	background-image: url(Images/pattern-hills.svg);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+
+.social {
+	margin-top: 101px;
+}
+
+.social a:not(:last-child) {
+	margin-right: 32px;
+}
+
+@media screen and (max-width: 670px) {
+	@keyframes change {
+		0% {
+			height: 31px;
+			width: 68px;
+			border: 1px solid var(--MainPink);
+			border-radius: 8px 8px 0 0;
+		}
+
+		100% {
+			height: 31px;
+			width: 68px;
+			transform: translateY(33px) rotateX(180deg);
+			border: 1px solid var(--MainPink);
+			border-radius: 8px 8px 0 0;
+			background-image: url(Images/BottomSvg-Phone.svg);
+		}
+	}
+
+	h1 {
+		font-size: 36px;
+		line-height: 50px;
+		letter-spacing: -0.08em;
+	}
+
+	h2 {
+		font-size: 18px;
+		line-height: 1.28em;
+		text-align: center;
+		letter-spacing: 0.34em;
+	}
+
+	h3 {
+		font-size: 7px;
+		line-height: 9px;
+		letter-spacing: 0.43em;
+	}
+
+	.container {
+		justify-content: space-around;
+	}
+
+	.NumberCard {
+		width: 70px;
+		height: 66px;
+		border-radius: 4px;
+	}
+
+	.NumberCardInnerBottom {
+		top: -65px;
+	}
+
+	.NumberCardInnerTop .TopPart,
+	.NumberCardInnerTop .BottomPart,
+	.NumberCardInnerBottom .TopPart {
+		height: 33px;
+	}
+
+	.NumberCardInnerTop .TopPart,
+	.NumberCardInnerBottom .TopPart {
+		background-image: url(Images/TopSvg-Phone.svg);
+	}
+
+	.NumberCardInnerTop .BottomPart {
+		background-image: url(Images/BottomSvg-Phone.svg);
+	}
+
+	.NumberCardInnerTop .TopPart h1,
+	.NumberCardInnerBottom .TopPart h1 {
+		transform: translateY(7px);
+	}
+
+	footer {
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	h2 {
+		margin-top: 80px;
+		margin-bottom: 40px;
+	}
+
+	.container {
+		margin: 0 20px;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		row-gap: 40px;
+	}
+
+	.container div {
+		justify-self: center;
+	}
+}
