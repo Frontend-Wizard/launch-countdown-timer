@@ -6,7 +6,7 @@ This is a solution to the Launch countdown timer challenge on Frontend Mentor. F
 
 ### Screenshot
 
-![](Images/screenshot.jpg)
+![](Images/Screenshot.jpg)
 
 ### Links
 
