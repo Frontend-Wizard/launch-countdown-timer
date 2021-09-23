@@ -24,6 +24,10 @@ const NumberCardS = {
 	Bottom_TopPart: document.getElementById("SNumberCardInnerBottom_TopPart"),
 };
 
+
+
+/*
+
 //Format number to 2 decimals
 const valid = (a) => {
 	if (a < 10) {
